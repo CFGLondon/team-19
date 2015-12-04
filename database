@@ -13,7 +13,7 @@ CREATE TABLE Volunters (
 
 CREATE TABLE Firstcontact (
 	
-	Volunterid INT(6) FOREIGN KEY,
+	Volunterid INT(6) not null ADD CONSTRAINT Volunters FOREIGN KEY (Volunterid) references Volunters(Volunterid),
 	name VARCHAR(100) NOT NULL,
 	email VARCHAR(100) NOT NULL
 
