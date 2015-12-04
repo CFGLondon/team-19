@@ -1,8 +1,8 @@
 CREATE TABLE Volunters (
 
-	PRIMARY KEY (Volunterid)
+	Volunterid INT(6) PRIMARY KEY,
 	Firstname VARCHAR(100) NOT NULL,
-	Surename VARCHAR(100) NOT NULL,
+	Surname VARCHAR(100) NOT NULL,
 	Birthday DATE NOT NULL,
 	Gender VARCHAR(10) NOT NULL,
 	Location VARCHAR(100) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE Volunters (
 
 CREATE TABLE Firstcontact (
 	
-	FOREIGN KEY (Volunterid),
+	Volunterid INT(6) FOREIGN KEY,
 	name VARCHAR(100) NOT NULL,
 	email VARCHAR(100) NOT NULL
 
@@ -21,7 +21,7 @@ CREATE TABLE Firstcontact (
 
 CREATE TABLE Secondcontact (
 
-	FOREIGN KEY (Volunterid),
+	Volunterid INT(6) FOREIGN KEY,
 	name VARCHAR(100) NOT NULL,
 	email VARCHAR(100) NOT NULL
 
@@ -30,7 +30,7 @@ CREATE TABLE Secondcontact (
 
 CREATE TABLE Hobbies_activities (
 
-	FOREIGN KEY (Volunterid),
+	Volunterid INT(6) FOREIGN KEY,
 	Profession TEXT NOT NULL,
 	Interests TEXT NOT NULL,
 	Hobbies TEXT NOT NULL
