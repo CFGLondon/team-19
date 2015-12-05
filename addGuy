@@ -1,0 +1,50 @@
+<?php
+	require_once 'sanitize_input.php';
+    require_once 'parametri_conexiune.php';
+    
+    session_start();
+     
+    //echo $_POST['firstname'];   
+
+    $firstname = sanitizeString($_POST['firstname']);
+    $surname =  sanitizeString($_POST['surname']);
+    $birthday = sanitizeString($_POST['birthday']);
+    $gender =  sanitizeString($_POST['sex']);
+    $location =  sanitizeString($_POST['location']);
+    $phoneNumber = sanitizeString($_POST['phoneNumber']);
+    $availability = sanitizeString($_POST['availability']);
+    $profession = sanitizeString($_POST['profession']);
+    $hobbies = sanitizeString($_POST['hobbies']);
+
+
+     echo sanitizeString($_POST['firstname']);
+
+    global $conn;   
+    $conn = new mysqli($host, $database_user, $database_password,$database_name);
+    
+    //echo $firstname;
+    
+    if ($conn->connect_error) 
+    {       
+
+        $_SESSION["login_error"]="Error!";
+        $conn->close();
+        header('Location: index.php');    
+    }    
+    else
+    {
+    	$newId=mysqli_insert_id($conn);   
+
+    	$i = 0;
+    	$result = 0;
+    	while($result == 0)
+    	{
+    		$result=$conn->query("INSERT INTO myTable (id, firstName, secondName, birthday, gender, location, phoneNumber, availability, profession, hobbies) 
+    			VALUES ($i,'$firstname','$surname','$birthday','$gender','$location','$phoneNumber','$availability','$profession','$hobbies')");  
+
+    		$i++;	     
+    	}	
+    	 
+    	echo "result" + $result;  
+    }
+?>
