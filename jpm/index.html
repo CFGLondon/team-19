@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Age Connect</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+
+  <body background="back3.jpg">
+    <div class="container">
+        <nav>
+          <ul class="nav nav-tabs pull-right" role="tablist">
+            <li role="presentation" class="myTab active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation" class="myTab" ><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+            <li role="presentation" class="myTab"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
+          </ul>
+        </nav>
+        <img src="log.png" class="img-responsive" id="logo">
+        <h3 class="text-muted">Age Connect</h3>
+      </div>
+    <div class="container" id="s">
+
+
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="home">
+        <div class="jumbotron">
+        <h2>No one should have no one.</h2>
+        <br>
+        <p class="lead">Age UK is the country's largest charity dedicated to helping everyone make the most of later life. We believe in a world where everyone can love later life and we work every day to achieve this.</p>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#volunteer-sign">
+          Sign up as a volunteer
+        </button>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#elder-sign">
+          Sign up to the service
+        </button>
+        <br>
+        <br>
+        <footer class="container">
+        <p>&copy; Age UK.</p>
+      </footer>
+      </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="login">
+        <br>
+        <br>
+        <br>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+          </div>
+          <button id="log-on" type="submit" class="btn btn-default pull-right">Login</button>
+        </form>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="about">
+        <div class="embed-responsive embed-responsive-16by9">
+           <iframe "embed-responsive-item" src="https://www.youtube.com/embed/g_ON4wY1Y24"></iframe>
+        </div>
+       
+        <h2>Who we are</h2>
+        <p>
+          Age UK is the country's largest charity dedicated to helping everyone make the most of later life.
+
+The over-60s is the fastest-growing group in society and there are more of us than ever before.
+
+Ageing is not an illness, but it can be challenging. At Age UK we provide services and support at a national and local level to inspire, enable and support older people.
+
+We stand up and speak for all those who have reached later life, and also protect the long-term interests of future generations.
+
+Our vision
+
+A world where everyone can love later life
+
+Our vision is ambitious. It won’t be easy to get there, and it won’t be a quick journey, but we believe it’s how things should be for older people and we work every day to achieve this.
+        </p>
+        <br>
+        <br>
+        <h2>What we do</h2>
+        <p>
+          Information and advice
+
+Growing older doesn’t come with a manual, so if you need information or advice on anything from health to housing, call our free national information line on 0800 169 2081. It's open 365 days a year from 8am to 7pm.
+        </p>
+        <p>
+          Campaigns
+
+Our Public Policy, Public Affairs and Campaigns teams raise awareness of the difficult situations faced by many older people and keep ageing issues in the public eye and in parliament.
+
+The issues we campaign on can vary, from calling for reform of the care system to trying to improve the bus route in our local community. Our campaigns offer lots of opportunities for us all to get involved and be heard by those who have the power to make our lives better.
+
+
+        </p>
+
+      </div>
+    </div>  
+      
+
+      
+
+
+      
+
+
+      <div class="modal fade" id="volunteer-sign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Volunteer</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-horizontal" id="sign">
+      <div class="form-group">
+        <label for="username" class="col-sm-2 control-label">Username</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="username" placeholder="Username">
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname" class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="surname" class="col-sm-2 control-label">Surname</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="surname" placeholder="surname">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender" class="col-sm-2 control-label">Gender</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="gender">
+              <option value="M">Male</option>
+              <option value="M">Female</option>
+            </select>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="dateofbirth" class="col-sm-2 control-label">Date of birth</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="dateofbirth" placeholder="dateofbirth">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location" class="col-sm-2 control-label">Location</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="location" placeholder="location">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Phone number</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="phone" placeholder="phone number">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="profession" class="col-sm-2 control-label">profession</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="profession" placeholder="what is your profession?">
+        </div>
+      </div>
+      <!--  the interest and hobbies -->
+      <br>
+      <br>
+      <hr>
+      <br>
+      <div class="form-group">
+        <label for="interest1" class="col-sm-2 control-label">interest 1</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="interest1" placeholder="your interest">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="interest2" class="col-sm-2 control-label">interest 2</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="interest2" placeholder="your interest">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="interest3" class="col-sm-2 control-label">interest 3</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="interest3" placeholder="your interest">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hobby1" class="col-sm-2 control-label">hobby 1</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="hobby1" placeholder="your hooby">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hobby2" class="col-sm-2 control-label">hobby 2</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="hobby2" placeholder="your hooby">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hobby3" class="col-sm-2 control-label">hobby 3</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="hobby3" placeholder="your hooby">
+        </div>
+      </div>
+      <button id="sub" type="submit" class="btn btn-default pull-right">Register</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </form>
+            </div>
+            
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="elder-sign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Details about you</h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-horizontal" id="sign">
+      <div class="form-group">
+        <label for="firstname" class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="surname" class="col-sm-2 control-label">Surname</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="surname" placeholder="surname">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="gender" class="col-sm-2 control-label">Gender</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="gender">
+              <option value="M">Male</option>
+              <option value="M">Female</option>
+            </select>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="dateofbirth" class="col-sm-2 control-label">Date of birth</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="dateofbirth" placeholder="dateofbirth">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location" class="col-sm-2 control-label">Location</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="location" placeholder="location">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Phone number</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="phone" placeholder="phone number">
+        </div>
+      </div>
+      <!--  the interest and hobbies -->
+      <br>
+      <br>
+      <hr>
+      <br>
+      <div class="form-group">
+        <label for="interest1" class="col-sm-2 control-label">interest 1</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="interest1" placeholder="your interest">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="interest2" class="col-sm-2 control-label">interest 2</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="interest2" placeholder="your interest">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="interest3" class="col-sm-2 control-label">interest 3</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="interest3" placeholder="your interest">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hobby1" class="col-sm-2 control-label">hobby 1</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="hobby1" placeholder="your hooby">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hobby2" class="col-sm-2 control-label">hobby 2</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="hobby2" placeholder="your hooby">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hobby3" class="col-sm-2 control-label">hobby 3</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="hobby3" placeholder="your hooby">
+        </div>
+      </div>
+      <button id="sub" type="submit" class="btn btn-default pull-right">Register</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </form>
+            </div>
+            
+    </div>
+  </div>
+</div>
+
+    </div> <!-- /container -->
+    
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    $('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+    </script>
+  </body>
+</html>
