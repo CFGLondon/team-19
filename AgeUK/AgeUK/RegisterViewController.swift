@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
     super.viewDidLoad()
     
     self.view.backgroundColor = UIColor.whiteColor()
-    self.title = "HELLO"
+    self.title = ""
     
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel",
       style: UIBarButtonItemStyle.Plain, target: self, action: "cancel")

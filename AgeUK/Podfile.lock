@@ -1,10 +1,13 @@
 PODS:
+  - MBProgressHUD (0.9.1)
   - SnapKit (0.18.0)
 
 DEPENDENCIES:
+  - MBProgressHUD
   - SnapKit
 
 SPEC CHECKSUMS:
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SnapKit: e1f090a6d47b1dd4bd89b73f72b6746a7835ef3c
 
 COCOAPODS: 0.39.0

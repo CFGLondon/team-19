@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
-    window?.rootViewController = WelcomeViewController()
+    window?.rootViewController = UINavigationController(rootViewController: HomeTableViewController())
+      //UINavigationController(rootViewController: HomeTableViewController())
+    //HomeTableViewController()//WelcomeViewController()
     window?.makeKeyAndVisible()
     
     UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(

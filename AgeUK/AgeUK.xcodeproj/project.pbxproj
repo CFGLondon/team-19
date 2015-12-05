@@ -10,6 +10,10 @@
 		3A233EE51C1287DC00FC37A4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A233EE41C1287DC00FC37A4 /* WelcomeViewController.swift */; };
 		3A233EE71C128EC300FC37A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A233EE61C128EC300FC37A4 /* RegisterViewController.swift */; };
 		3A233EE91C1294C500FC37A4 /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A233EE81C1294C500FC37A4 /* HobbiesViewController.swift */; };
+		3A233EEF1C12A61F00FC37A4 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A233EEE1C12A61F00FC37A4 /* HomeTableViewController.swift */; };
+		3A233EF11C12A75A00FC37A4 /* YTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A233EF01C12A75A00FC37A4 /* YTTableViewCell.swift */; };
+		3A233EF31C12B2D000FC37A4 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A233EF21C12B2D000FC37A4 /* ProfileTableViewCell.swift */; };
+		3A233EF51C12BA6200FC37A4 /* CallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A233EF41C12BA6200FC37A4 /* CallTableViewCell.swift */; };
 		3A50CCBE1C1286A100B428B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A50CCBD1C1286A100B428B2 /* AppDelegate.swift */; };
 		3A50CCC51C1286A100B428B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A50CCC41C1286A100B428B2 /* Assets.xcassets */; };
 		3A50CCC81C1286A100B428B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A50CCC61C1286A100B428B2 /* LaunchScreen.storyboard */; };
@@ -22,6 +26,10 @@
 		3A233EE41C1287DC00FC37A4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3A233EE61C128EC300FC37A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3A233EE81C1294C500FC37A4 /* HobbiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
+		3A233EEE1C12A61F00FC37A4 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		3A233EF01C12A75A00FC37A4 /* YTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTTableViewCell.swift; sourceTree = "<group>"; };
+		3A233EF21C12B2D000FC37A4 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		3A233EF41C12BA6200FC37A4 /* CallTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallTableViewCell.swift; sourceTree = "<group>"; };
 		3A50CCBA1C1286A100B428B2 /* AgeUK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgeUK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A50CCBD1C1286A100B428B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A50CCC41C1286A100B428B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +82,10 @@
 			children = (
 				3A50CCBD1C1286A100B428B2 /* AppDelegate.swift */,
 				3A233EE81C1294C500FC37A4 /* HobbiesViewController.swift */,
+				3A233EF01C12A75A00FC37A4 /* YTTableViewCell.swift */,
+				3A233EF41C12BA6200FC37A4 /* CallTableViewCell.swift */,
+				3A233EEE1C12A61F00FC37A4 /* HomeTableViewController.swift */,
+				3A233EF21C12B2D000FC37A4 /* ProfileTableViewCell.swift */,
 				3A233EE41C1287DC00FC37A4 /* WelcomeViewController.swift */,
 				3A233EE61C128EC300FC37A4 /* RegisterViewController.swift */,
 				3A50CCC41C1286A100B428B2 /* Assets.xcassets */,
@@ -212,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A233EEF1C12A61F00FC37A4 /* HomeTableViewController.swift in Sources */,
+				3A233EF51C12BA6200FC37A4 /* CallTableViewCell.swift in Sources */,
 				3A233EE71C128EC300FC37A4 /* RegisterViewController.swift in Sources */,
 				3A233EE91C1294C500FC37A4 /* HobbiesViewController.swift in Sources */,
+				3A233EF31C12B2D000FC37A4 /* ProfileTableViewCell.swift in Sources */,
+				3A233EF11C12A75A00FC37A4 /* YTTableViewCell.swift in Sources */,
 				3A233EE51C1287DC00FC37A4 /* WelcomeViewController.swift in Sources */,
 				3A50CCBE1C1286A100B428B2 /* AppDelegate.swift in Sources */,
 			);
