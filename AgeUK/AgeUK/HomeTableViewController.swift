@@ -92,10 +92,19 @@ class HomeTableViewController: UITableViewController {
     return cell
   }
   
+  func feedback() {
+    let alert = UIAlertController(title: "Rate", message: "Please take a moment to rate your experience", preferredStyle: UIAlertControllerStyle.Alert)
+    alert.addAction(UIAlertAction(title: "Very good", style: UIAlertActionStyle.Default, handler: nil))
+    alert.addAction(UIAlertAction(title: "Normal", style: UIAlertActionStyle.Default, handler: nil))
+    alert.addAction(UIAlertAction(title: "Bad", style: UIAlertActionStyle.Default, handler: nil))
+    self.presentViewController(alert, animated: true, completion: nil)
+  }
+  
   func call() {
-    let alert = UIAlertController(title: "Reminder", message: "You will NOT:\n1. Say ...\n2.", preferredStyle: UIAlertControllerStyle.Alert)
+    let alert = UIAlertController(title: "Rate", message: "You will NOT:\n1.\n2.\n3.", preferredStyle: UIAlertControllerStyle.Alert)
     alert.addAction(UIAlertAction(title: "I agree", style: UIAlertActionStyle.Default, handler: { (_) -> Void in
-        UIApplication.sharedApplication().openURL(NSURL(string: "tel://9809088798")!)
+      UIApplication.sharedApplication().openURL(NSURL(string: "tel://9809088798")!)
+      self.feedback()
     }))
     alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
     self.presentViewController(alert, animated: true, completion: nil)
@@ -190,7 +199,8 @@ class HomeTableViewController: UITableViewController {
     if indexPath.section == 0 && indexPath.row == 1 {
       let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
       alert.addAction(UIAlertAction(title: "Add to calendar", style: UIAlertActionStyle.Default, handler: nil))
-      alert.addAction(UIAlertAction(title: "Remind me later", style: UIAlertActionStyle.Default, handler: nil))
+      alert.addAction(UIAlertAction(title: "Cannot do it today", style: UIAlertActionStyle.Default, handler: nil))
+      alert.addAction(UIAlertAction(title: "Report person", style: UIAlertActionStyle.Destructive, handler: nil))
       alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
       self.presentViewController(alert, animated: true, completion: nil)
     }
