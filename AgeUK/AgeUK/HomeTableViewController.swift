@@ -101,7 +101,7 @@ class HomeTableViewController: UITableViewController {
   }
   
   func call() {
-    let alert = UIAlertController(title: "Rate", message: "You will NOT:\n1.\n2.\n3.", preferredStyle: UIAlertControllerStyle.Alert)
+    let alert = UIAlertController(title: "Rules", message: "You will NOT:\n1.\n2.\n3.", preferredStyle: UIAlertControllerStyle.Alert)
     alert.addAction(UIAlertAction(title: "I agree", style: UIAlertActionStyle.Default, handler: { (_) -> Void in
       UIApplication.sharedApplication().openURL(NSURL(string: "tel://9809088798")!)
       self.feedback()
