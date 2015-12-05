@@ -1,0 +1,30 @@
+override func viewDidLoad() {
+    super.viewDidLoad()
+    cityLabel.text = location
+    // Invoke weather service to get the weather data
+    WeatherService.sharedWeatherService().getCurrentWeather(location) { (data)
+-> () in
+        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            if let weatherData = data {
+                self.weatherLabel.text = weatherData.weather.capitalizedString
+                self.temperatureLabel.text = String(format: "%d",
+weatherData.temperature) + "\u{00B0}"
+} })
+} }
+
+there's an update, use NCUpdateResult.NewData
+    cityLabel.text = location
+    WeatherService.sharedWeatherService().getCurrentWeather(location) { (data)
+-> () in
+        guard let weatherData = data else {
+            completionHandler(NCUpdateResult.NoData)
+            return
+}
+        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+            self.weatherLabel.text = weatherData.weather.capitalizedString
+            self.temperatureLabel.text = String(format: "%d",
+weatherData.temperature) + "\u{00B0}"
+        })
+        completionHandler(NCUpdateResult.NewData)
+    }
+}
