@@ -1,0 +1,30 @@
+func createEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSdate) {
+	
+    let event = EKEvent(eventStore: eventStore)
+	// check if permission to access calendar is given
+	if (EKEventStore.authorizationStatusForEntityType(.Event) != EKAuthorizationStatus.Authorized)
+	// if not granted, ask for permission 
+	{
+	eventStore.requestAccessToEntityType(.Event, completion: {granted, error in})
+	
+	// if permission is not granted
+	event.title = "Call Amy at 3"
+	event.startDate = startDate
+	event.endDate = endDate
+	event.calendar = eventStore.defaultCalendarForNewEvents
+	do {
+		try eventStore.saveEvent(event, span: .ThisEvent)
+	} catch {
+		print("Bad things happened")
+	}
+	}
+	else 
+	{
+	event.title = "Call Amy at 3"
+	event.startDate = startDate
+	event.endDate = endDate
+	event.calendar = eventStore.defaultCalendarForNewEvents
+	do {
+		try eventStore.saveEvent(event, span: .ThisEvent)}
+	}
+}
