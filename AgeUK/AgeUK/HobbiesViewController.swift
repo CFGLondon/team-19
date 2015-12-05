@@ -18,7 +18,7 @@ class HobbiesViewController: UIViewController {
     self.view.backgroundColor = UIColor.whiteColor()
     self.title = ""
     
-    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done",
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next",
       style: UIBarButtonItemStyle.Plain, target: self, action: "next")
     
     let scroll = UIScrollView()
@@ -33,17 +33,7 @@ class HobbiesViewController: UIViewController {
   }
   
   func next() {
-    let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-    hud.mode = MBProgressHUDMode.Indeterminate
-    hud.labelText = "Woking on this";
-    hud.show(true)
-    
-    let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
-    dispatch_after(time, dispatch_get_main_queue()) {
-      hud.hide(true)
-      self.presentViewController(UINavigationController(rootViewController: HomeTableViewController()),
-        animated: true, completion: nil)
-    }
+    self.navigationController?.pushViewController(AgreeViewController(), animated: true)
   }
   
 }

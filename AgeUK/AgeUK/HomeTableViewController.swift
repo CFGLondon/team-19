@@ -25,6 +25,7 @@ class HomeTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.title = "HOME"
     self.tableView.tableFooterView = UIView()
     
     self.tableView.registerClass(ProfileTableViewCell.self,
@@ -92,7 +93,12 @@ class HomeTableViewController: UITableViewController {
   }
   
   func call() {
-    UIApplication.sharedApplication().openURL(NSURL(string: "tel://9809088798")!)
+    let alert = UIAlertController(title: "Reminder", message: "You will NOT:\n1. Say ...\n2.", preferredStyle: UIAlertControllerStyle.Alert)
+    alert.addAction(UIAlertAction(title: "I agree", style: UIAlertActionStyle.Default, handler: { (_) -> Void in
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://9809088798")!)
+    }))
+    alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+    self.presentViewController(alert, animated: true, completion: nil)
   }
   
   func getDescriptionCell(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
