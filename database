@@ -1,6 +1,9 @@
+
+
 CREATE TABLE Volunteer (
 
-	Volunteerid MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	Volunteerid MEDIUMINT unsigned NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY ('Volunteerid')
 	Firstname VARCHAR(100) NOT NULL,
 	Surname VARCHAR(100) NOT NULL,
 	Birthday DATE NOT NULL,
