@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+ var elders = [{firstName:'Ana', lastName:'Cotirlea', gender:'F', availability:{days: ['SU', 'MO'], hours: [1500, 1800]}, profession: 'Engineer', interests:['politics'], hobbies:['swimming']},
+			 	{firstName:'Bob', lastName:'Smith', gender:'F', availability:{days: ['SU', 'MO', 'TU'], hours: [1500, 1800, 2000]}, profession: 'Painter', interests:['politics', 'geology'], hobbies:['swimming', 'knitting']},
+				{firstName:'Dorel', lastName:'Pop', gender:'F', availability:{days: ['MO'], hours: [1500, 1800, 1400]}, profession: 'Doctor', interests:['politics', 'sports'], hobbies:['swimming', 'jogging']},
+				{firstName:'JP', lastName:'Morgan', gender:'F', availability:{days: ['SU'], hours: [1500]}, profession: 'Banker', interests:['politics', 'financial'], hobbies:['swimming', 'running']},
+				{firstName:'Maria', lastName:'Thomas', gender:'F', availability:{days: ['SU', 'MO'], hours: [1500, 1800]}, profession: 'Engineer', interests:['politics'], hobbies:['swimming', 'dancing', 'painting', 'knitting']}];
+
+
+
+var me = {firstName:'Adrian', lastName:'Mateoaea', gender:'M', availability:{days: ['SU', 'MO','TU'], hours: [1500, 1800, 1400]}, profession: 'Engineer', interests:['politics','geology','sports'], hobbies:['swimming','jogging','running']};
+
+Array.prototype.remove = function(from, to)
+{
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+
+  return this.push.apply(this, rest);
+};
+
+function compare(a,b) 
+{
+  if (a.score > b.score)
+    return -1;
+  if (a.score < b.score)
+    return 1;
+
+  return 0;
+}
+
+function intersectArrays(a, b)
+{
+  var ai = 0, bi = 0;
+  var result = new Array();
+
+  while( ai < a.length && bi < b.length )
+  {
+    if (a[ai] < b[bi] )
+    {
+    	ai++;
+    }
+    else if (a[ai] > b[bi] )
+   	{
+   		bi++;
+   	}
+    else
+    {
+    	result.push(a[ai]);
+        
+        ai++;
+        bi++;
+    }
+  }
+
+  return result.length;
+}
+
+function match(elders, me) 
+{
+	for (var i = 0; i < 5; i++)
+	{
+		var person = elders[i];
+		var expectedScore = 0;
+
+		elders[i].score = 0;
+
+		if(intersectArrays(person.availability.days, me.availability.days) == 0)
+		{
+			continue;
+		}
+
+		if(intersectArrays(person.availability.hours, me.availability.hours) == 0)
+		{
+			continue;
+		}
+
+		expectedScore += 100;
+
+		if(person.profession == me.profession)
+		{
+			elders[i].score += 100;
+		}
+
+		expectedScore += (100 * person.hobbies.length);
+		elders[i].score += (100 * intersectArrays(person.hobbies, me.hobbies));
+
+
+		expectedScore += (100 * person.interests.length);
+		elders[i].score += (100 * intersectArrays(person.interests, me.interests));
+
+		elders[i].score = (elders[i].score * 100) / expectedScore;
+	}
+
+	elders = elders.sort(compare);
+	elders = elders.slice(0, 3);
+
+	console.log(elders); 
+
+	return elders;
+}
+
+match(elders,me);
+
+</script>
+
+</body>
+</html>
