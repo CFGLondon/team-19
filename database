@@ -1,6 +1,6 @@
 CREATE TABLE Volunteer (
 
-	Volunteerid INT(10000) NOT NULL auto_increment PRIMARY KEY,
+	Volunteerid MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	Firstname VARCHAR(100) NOT NULL,
 	Surname VARCHAR(100) NOT NULL,
 	Birthday DATE NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE Volunteer (
 
 CREATE TABLE Firstcontact (
 	
-	Volunteerid INT(10000) NOT NULL FOREIGN KEY (Volunteerid) references Volunteer(Volunteerid),
+	Volunteerid MEDIUMINT NOT NULL FOREIGN KEY (Volunteerid) references Volunteer(Volunteerid),
 	name VARCHAR(100) NOT NULL,
 	email VARCHAR(100) NOT NULL
 
@@ -21,7 +21,7 @@ CREATE TABLE Firstcontact (
 
 CREATE TABLE Secondcontact (
 
-	Volunteerid INT(10000) NOT NULL FOREIGN KEY (Volunteerid) references Volunteer(Volunteerid),
+	Volunteerid MEDIUMINT NOT NULL FOREIGN KEY (Volunteerid) references Volunteer(Volunteerid),
 	name VARCHAR(100) NOT NULL,
 	email VARCHAR(100) NOT NULL
 
@@ -30,7 +30,7 @@ CREATE TABLE Secondcontact (
 
 CREATE TABLE Hobbies_activities (
 
-	Volunteerid INT(10000) NOT NULL FOREIGN KEY (Volunteerid) references Volunteer(Volunteerid),
+	Volunteerid MEDIUMINT NOT NULL FOREIGN KEY (Volunteerid) references Volunteer(Volunteerid),
 	Profession TEXT NOT NULL,
 	Interests TEXT NOT NULL,
 	Hobbies TEXT NOT NULL
